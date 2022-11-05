@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../DecisionTree_ACL_10K.srcs/sources_1/ip/bram_171_sada/sim/bram_171_sada.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,1372 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Jul  2 23:56:49 2022
+| Host         : User-2020JGCOAY running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file MBitTree_timing_summary_routed.rpt -pb MBitTree_timing_summary_routed.pb -rpx MBitTree_timing_summary_routed.rpx -warn_on_violation
+| Design       : MBitTree
+| Device       : 7vx690t-ffg1761
+| Speed File   : -2  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (211)
+6. checking no_output_delay (32)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (211)
+--------------------------------
+ There are 211 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (32)
+--------------------------------
+ There are 32 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.156       -0.503                      9                23308        0.020        0.000                      0                23308        1.616        0.000                       0                 18633  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 2.016}        4.032           248.016         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                -0.156       -0.503                      9                23308        0.020        0.000                      0                23308        1.616        0.000                       0                 18633  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            9  Failing Endpoints,  Worst Slack       -0.156ns,  Total Violation       -0.503ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.020ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        1.616ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.156ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.841ns  (logic 1.299ns (33.820%)  route 2.542ns (66.180%))
+  Logic Levels:           7  (CARRY4=3 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.377ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.297ns = ( 8.329 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.934ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.942     4.934    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/clka
+    RAMB36_X3Y19         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y19         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[15])
+                                                      0.622     5.556 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/DOADO[15]
+                         net (fo=1, routed)           0.998     6.554    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[214][15]
+    SLICE_X57Y103        LUT4 (Prop_lut4_I2_O)        0.043     6.597 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[214]_INST_0/O
+                         net (fo=1, routed)           0.330     6.927    pipeline_SADA_inst/ruleMatch_SADA_inst/dout1[214]
+    SLICE_X61Y102        LUT6 (Prop_lut6_I5_O)        0.043     6.970 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[1]_i_144__0/O
+                         net (fo=1, routed)           0.271     7.241    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[1]_i_144__0_n_0
+    SLICE_X60Y102        LUT6 (Prop_lut6_I1_O)        0.043     7.284 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[1]_i_110__0/O
+                         net (fo=1, routed)           0.000     7.284    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[1]_i_110__0_n_0
+    SLICE_X60Y102        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.256     7.540 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]_i_80__0/CO[3]
+                         net (fo=1, routed)           0.000     7.540    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]_i_80__0_n_0
+    SLICE_X60Y103        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.054     7.594 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]_i_37__0/CO[3]
+                         net (fo=1, routed)           0.000     7.594    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]_i_37__0_n_0
+    SLICE_X60Y104        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.110     7.704 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]_i_6__0/CO[2]
+                         net (fo=1, routed)           0.943     8.647    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1534_out
+    SLICE_X50Y111        LUT5 (Prop_lut5_I4_O)        0.128     8.775 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     8.775    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1077_out
+    SLICE_X50Y111        FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.548     8.329    pipeline_SADA_inst/ruleMatch_SADA_inst/clk
+    SLICE_X50Y111        FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]/C
+                         clock pessimism              0.260     8.590    
+                         clock uncertainty           -0.035     8.554    
+    SLICE_X50Y111        FDCE (Setup_fdce_C_D)        0.065     8.619    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.619    
+                         arrival time                          -8.775    
+  -------------------------------------------------------------------
+                         slack                                 -0.156    
+
+Slack (VIOLATED) :        -0.131ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        4.099ns  (logic 1.314ns (32.053%)  route 2.785ns (67.947%))
+  Logic Levels:           9  (CARRY4=2 LUT3=1 LUT4=1 LUT5=3 LUT6=2)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.471ns = ( 8.503 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.868ns
+    Clock Pessimism Removal (CPR):    0.335ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.876     4.868    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/clka
+    RAMB36_X4Y19         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X4Y19         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
+                                                      0.622     5.490 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/DOADO[0]
+                         net (fo=2, routed)           1.196     6.687    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[394][0]
+    SLICE_X36Y89         LUT4 (Prop_lut4_I2_O)        0.043     6.730 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[378]_INST_0/O
+                         net (fo=18, routed)          0.351     7.081    pipeline_SADA_inst/ruleMatch_SADA_inst/dout1[378]
+    SLICE_X37Y88         LUT3 (Prop_lut3_I2_O)        0.043     7.124 f  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_163__0/O
+                         net (fo=3, routed)           0.195     7.319    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_163__0_n_0
+    SLICE_X36Y89         LUT6 (Prop_lut6_I3_O)        0.043     7.362 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_165__0/O
+                         net (fo=1, routed)           0.108     7.469    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1640_out[19]
+    SLICE_X36Y89         LUT6 (Prop_lut6_I1_O)        0.043     7.512 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_131__0/O
+                         net (fo=1, routed)           0.271     7.783    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_131__0_n_0
+    SLICE_X38Y90         LUT5 (Prop_lut5_I4_O)        0.043     7.826 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_92__0/O
+                         net (fo=1, routed)           0.000     7.826    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_92__0_n_0
+    SLICE_X38Y90         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.195     8.021 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]_i_41__0/CO[3]
+                         net (fo=1, routed)           0.000     8.021    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]_i_41__0_n_0
+    SLICE_X38Y91         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.110     8.131 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]_i_7__0/CO[2]
+                         net (fo=1, routed)           0.566     8.697    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1540_out
+    SLICE_X51Y96         LUT5 (Prop_lut5_I1_O)        0.129     8.826 f  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_2__0/O
+                         net (fo=1, routed)           0.099     8.925    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_2__0_n_0
+    SLICE_X51Y96         LUT5 (Prop_lut5_I0_O)        0.043     8.968 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     8.968    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1086_out
+    SLICE_X51Y96         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.722     8.503    pipeline_SADA_inst/ruleMatch_SADA_inst/clk
+    SLICE_X51Y96         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]/C
+                         clock pessimism              0.335     8.839    
+                         clock uncertainty           -0.035     8.803    
+    SLICE_X51Y96         FDCE (Setup_fdce_C_D)        0.033     8.836    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[2]
+  -------------------------------------------------------------------
+                         required time                          8.836    
+                         arrival time                          -8.968    
+  -------------------------------------------------------------------
+                         slack                                 -0.131    
+
+Slack (VIOLATED) :        -0.070ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        4.037ns  (logic 1.378ns (34.135%)  route 2.659ns (65.865%))
+  Logic Levels:           9  (CARRY4=2 LUT3=1 LUT4=1 LUT5=3 LUT6=2)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.469ns = ( 8.501 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.868ns
+    Clock Pessimism Removal (CPR):    0.335ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.876     4.868    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/clka
+    RAMB36_X4Y19         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X4Y19         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[0])
+                                                      0.622     5.490 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/DOBDO[0]
+                         net (fo=1, routed)           1.100     6.590    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[394][0]
+    SLICE_X38Y92         LUT4 (Prop_lut4_I2_O)        0.043     6.633 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[378]_INST_0/O
+                         net (fo=19, routed)          0.484     7.117    pipeline_SADA_inst/ruleMatch_SADA_inst/dout2[378]
+    SLICE_X40Y89         LUT3 (Prop_lut3_I1_O)        0.043     7.160 f  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_134__0/O
+                         net (fo=3, routed)           0.199     7.359    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_134__0_n_0
+    SLICE_X40Y90         LUT6 (Prop_lut6_I5_O)        0.043     7.402 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_167__0/O
+                         net (fo=1, routed)           0.108     7.510    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag269_out[13]
+    SLICE_X40Y90         LUT6 (Prop_lut6_I1_O)        0.043     7.553 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_135__0/O
+                         net (fo=1, routed)           0.183     7.735    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_135__0_n_0
+    SLICE_X41Y90         LUT5 (Prop_lut5_I4_O)        0.043     7.778 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_94__0/O
+                         net (fo=1, routed)           0.000     7.778    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_94__0_n_0
+    SLICE_X41Y90         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.259     8.037 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]_i_41__0/CO[3]
+                         net (fo=1, routed)           0.000     8.037    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]_i_41__0_n_0
+    SLICE_X41Y91         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.110     8.147 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]_i_7__0/CO[2]
+                         net (fo=1, routed)           0.485     8.632    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag259_out
+    SLICE_X51Y90         LUT5 (Prop_lut5_I1_O)        0.129     8.761 f  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_2__0/O
+                         net (fo=1, routed)           0.101     8.862    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_2__0_n_0
+    SLICE_X51Y90         LUT5 (Prop_lut5_I0_O)        0.043     8.905 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     8.905    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2021_out
+    SLICE_X51Y90         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.720     8.501    pipeline_SADA_inst/ruleMatch_SADA_inst/clk
+    SLICE_X51Y90         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]/C
+                         clock pessimism              0.335     8.837    
+                         clock uncertainty           -0.035     8.801    
+    SLICE_X51Y90         FDCE (Setup_fdce_C_D)        0.034     8.835    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag2_reg[2]
+  -------------------------------------------------------------------
+                         required time                          8.835    
+                         arrival time                          -8.905    
+  -------------------------------------------------------------------
+                         slack                                 -0.070    
+
+Slack (VIOLATED) :        -0.066ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ADDRBWRADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.442ns  (logic 0.702ns (20.396%)  route 2.740ns (79.604%))
+  Logic Levels:           7  (LUT5=1 LUT6=4 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.205ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.139ns = ( 8.171 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.602ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.609     4.602    pipeline_SADA_inst/Reg_level5_level6_inst/clk
+    SLICE_X62Y138        FDCE                                         r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y138        FDCE (Prop_fdce_C_Q)         0.259     4.861 r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/Q
+                         net (fo=26, routed)          0.668     5.529    pipeline_SADA_inst/Reg_level5_level6_inst/node_level6_in2[24]
+    SLICE_X58Y136        LUT6 (Prop_lut6_I2_O)        0.043     5.572 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270/O
+                         net (fo=1, routed)           0.000     5.572    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270_n_0
+    SLICE_X58Y136        MUXF7 (Prop_muxf7_I1_O)      0.103     5.675 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166/O
+                         net (fo=1, routed)           0.000     5.675    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166_n_0
+    SLICE_X58Y136        MUXF8 (Prop_muxf8_I1_O)      0.043     5.718 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82/O
+                         net (fo=1, routed)           0.471     6.189    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82_n_0
+    SLICE_X61Y140        LUT6 (Prop_lut6_I5_O)        0.125     6.314 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37/O
+                         net (fo=1, routed)           0.364     6.678    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37_n_0
+    SLICE_X60Y143        LUT6 (Prop_lut6_I0_O)        0.043     6.721 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_23/O
+                         net (fo=3, routed)           0.509     7.230    pipeline_SADA_inst/Reg_level5_level6_inst/level6_SADA_inst/Ebits2[2]
+    SLICE_X61Y148        LUT6 (Prop_lut6_I5_O)        0.043     7.273 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22/O
+                         net (fo=4, routed)           0.381     7.654    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22_n_0
+    SLICE_X60Y152        LUT5 (Prop_lut5_I1_O)        0.043     7.697 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_9/O
+                         net (fo=2, routed)           0.346     8.044    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[7]
+    RAMB18_X4Y60         RAMB18E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ADDRBWRADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.389     8.171    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/clka
+    RAMB18_X4Y60         RAMB18E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/CLKBWRCLK
+                         clock pessimism              0.258     8.429    
+                         clock uncertainty           -0.035     8.394    
+    RAMB18_X4Y60         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[11])
+                                                     -0.416     7.978    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram
+  -------------------------------------------------------------------
+                         required time                          7.978    
+                         arrival time                          -8.044    
+  -------------------------------------------------------------------
+                         slack                                 -0.066    
+
+Slack (VIOLATED) :        -0.060ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        4.098ns  (logic 1.271ns (31.012%)  route 2.827ns (68.988%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.471ns = ( 8.503 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.799ns
+    Clock Pessimism Removal (CPR):    0.335ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.807     4.799    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/clka
+    RAMB36_X5Y18         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y18         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
+                                                      0.622     5.421 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/DOADO[0]
+                         net (fo=1, routed)           0.777     6.198    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[106]_0[0]
+    SLICE_X57Y90         LUT4 (Prop_lut4_I3_O)        0.043     6.241 r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/douta[72]_INST_0/O
+                         net (fo=14, routed)          0.497     6.738    pipeline_SADA_inst/ruleMatch_SADA_inst/dout1[72]
+    SLICE_X52Y91         LUT3 (Prop_lut3_I1_O)        0.043     6.781 f  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_148__0/O
+                         net (fo=3, routed)           0.574     7.355    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_148__0_n_0
+    SLICE_X50Y90         LUT6 (Prop_lut6_I3_O)        0.043     7.398 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_150__0/O
+                         net (fo=1, routed)           0.197     7.596    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag16[19]
+    SLICE_X50Y88         LUT6 (Prop_lut6_I1_O)        0.043     7.639 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_116__0/O
+                         net (fo=1, routed)           0.347     7.986    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_116__0_n_0
+    SLICE_X51Y88         LUT5 (Prop_lut5_I4_O)        0.043     8.029 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_82__0/O
+                         net (fo=1, routed)           0.000     8.029    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_82__0_n_0
+    SLICE_X51Y88         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.195     8.224 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]_i_37__0/CO[3]
+                         net (fo=1, routed)           0.000     8.224    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]_i_37__0_n_0
+    SLICE_X51Y89         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.110     8.334 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]_i_6__0/CO[2]
+                         net (fo=1, routed)           0.435     8.769    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag15
+    SLICE_X51Y95         LUT5 (Prop_lut5_I4_O)        0.129     8.898 r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1[0]_i_1__0/O
+                         net (fo=1, routed)           0.000     8.898    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag10
+    SLICE_X51Y95         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.722     8.503    pipeline_SADA_inst/ruleMatch_SADA_inst/clk
+    SLICE_X51Y95         FDCE                                         r  pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]/C
+                         clock pessimism              0.335     8.839    
+                         clock uncertainty           -0.035     8.803    
+    SLICE_X51Y95         FDCE (Setup_fdce_C_D)        0.034     8.837    pipeline_SADA_inst/ruleMatch_SADA_inst/match_flag1_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.837    
+                         arrival time                          -8.898    
+  -------------------------------------------------------------------
+                         slack                                 -0.060    
+
+Slack (VIOLATED) :        -0.006ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.382ns  (logic 0.702ns (20.757%)  route 2.680ns (79.243%))
+  Logic Levels:           7  (LUT2=1 LUT6=4 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.205ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.139ns = ( 8.171 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.602ns
+    Clock Pessimism Removal (CPR):    0.258ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.609     4.602    pipeline_SADA_inst/Reg_level5_level6_inst/clk
+    SLICE_X62Y138        FDCE                                         r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y138        FDCE (Prop_fdce_C_Q)         0.259     4.861 r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/Q
+                         net (fo=26, routed)          0.668     5.529    pipeline_SADA_inst/Reg_level5_level6_inst/node_level6_in2[24]
+    SLICE_X58Y136        LUT6 (Prop_lut6_I2_O)        0.043     5.572 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270/O
+                         net (fo=1, routed)           0.000     5.572    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270_n_0
+    SLICE_X58Y136        MUXF7 (Prop_muxf7_I1_O)      0.103     5.675 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166/O
+                         net (fo=1, routed)           0.000     5.675    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166_n_0
+    SLICE_X58Y136        MUXF8 (Prop_muxf8_I1_O)      0.043     5.718 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82/O
+                         net (fo=1, routed)           0.471     6.189    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82_n_0
+    SLICE_X61Y140        LUT6 (Prop_lut6_I5_O)        0.125     6.314 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37/O
+                         net (fo=1, routed)           0.364     6.678    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37_n_0
+    SLICE_X60Y143        LUT6 (Prop_lut6_I0_O)        0.043     6.721 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_23/O
+                         net (fo=3, routed)           0.509     7.230    pipeline_SADA_inst/Reg_level5_level6_inst/level6_SADA_inst/Ebits2[2]
+    SLICE_X61Y148        LUT6 (Prop_lut6_I5_O)        0.043     7.273 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22/O
+                         net (fo=4, routed)           0.201     7.475    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22_n_0
+    SLICE_X60Y149        LUT2 (Prop_lut2_I0_O)        0.043     7.518 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_12/O
+                         net (fo=2, routed)           0.466     7.984    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[4]
+    RAMB18_X4Y60         RAMB18E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.389     8.171    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/clka
+    RAMB18_X4Y60         RAMB18E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram/CLKBWRCLK
+                         clock pessimism              0.258     8.429    
+                         clock uncertainty           -0.035     8.394    
+    RAMB18_X4Y60         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                     -0.416     7.978    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram
+  -------------------------------------------------------------------
+                         required time                          7.978    
+                         arrival time                          -7.984    
+  -------------------------------------------------------------------
+                         slack                                 -0.006    
+
+Slack (VIOLATED) :        -0.005ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out1_reg[21]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.690ns  (logic 0.236ns (6.396%)  route 3.454ns (93.604%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.184ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.592ns = ( 8.624 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.668ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.675     4.668    pipeline_SADA_inst/Reg_tree_ruleMatch_inst/clk
+    SLICE_X56Y142        FDCE                                         r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out1_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y142        FDCE (Prop_fdce_C_Q)         0.236     4.904 r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out1_reg[21]/Q
+                         net (fo=114, routed)         3.454     8.358    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/addra[9]
+    RAMB36_X2Y15         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.842     8.624    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/clka
+    RAMB36_X2Y15         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism              0.260     8.884    
+                         clock uncertainty           -0.035     8.849    
+    RAMB36_X2Y15         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                     -0.496     8.353    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                          8.353    
+                         arrival time                          -8.358    
+  -------------------------------------------------------------------
+                         slack                                 -0.005    
+
+Slack (VIOLATED) :        -0.004ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.625ns  (logic 0.702ns (19.364%)  route 2.923ns (80.636%))
+  Logic Levels:           7  (LUT5=1 LUT6=4 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.309ns = ( 8.341 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.602ns
+    Clock Pessimism Removal (CPR):    0.333ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.609     4.602    pipeline_SADA_inst/Reg_level5_level6_inst/clk
+    SLICE_X62Y138        FDCE                                         r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y138        FDCE (Prop_fdce_C_Q)         0.259     4.861 r  pipeline_SADA_inst/Reg_level5_level6_inst/node_out2_reg[24]/Q
+                         net (fo=26, routed)          0.668     5.529    pipeline_SADA_inst/Reg_level5_level6_inst/node_level6_in2[24]
+    SLICE_X58Y136        LUT6 (Prop_lut6_I2_O)        0.043     5.572 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270/O
+                         net (fo=1, routed)           0.000     5.572    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_270_n_0
+    SLICE_X58Y136        MUXF7 (Prop_muxf7_I1_O)      0.103     5.675 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166/O
+                         net (fo=1, routed)           0.000     5.675    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_166_n_0
+    SLICE_X58Y136        MUXF8 (Prop_muxf8_I1_O)      0.043     5.718 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82/O
+                         net (fo=1, routed)           0.471     6.189    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_82_n_0
+    SLICE_X61Y140        LUT6 (Prop_lut6_I5_O)        0.125     6.314 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37/O
+                         net (fo=1, routed)           0.364     6.678    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_37_n_0
+    SLICE_X60Y143        LUT6 (Prop_lut6_I0_O)        0.043     6.721 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_23/O
+                         net (fo=3, routed)           0.509     7.230    pipeline_SADA_inst/Reg_level5_level6_inst/level6_SADA_inst/Ebits2[2]
+    SLICE_X61Y148        LUT6 (Prop_lut6_I5_O)        0.043     7.273 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22/O
+                         net (fo=4, routed)           0.381     7.654    pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_22_n_0
+    SLICE_X60Y152        LUT5 (Prop_lut5_I1_O)        0.043     7.697 r  pipeline_SADA_inst/Reg_level5_level6_inst/bram_level7_sada_i_9/O
+                         net (fo=2, routed)           0.530     8.227    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/addrb[7]
+    RAMB36_X4Y29         RAMB36E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.559     8.341    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X4Y29         RAMB36E1                                     r  pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism              0.333     8.674    
+                         clock uncertainty           -0.035     8.639    
+    RAMB36_X4Y29         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[12])
+                                                     -0.416     8.223    pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                          8.223    
+                         arrival time                          -8.227    
+  -------------------------------------------------------------------
+                         slack                                 -0.004    
+
+Slack (VIOLATED) :        -0.004ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.499ns  (logic 0.236ns (6.746%)  route 3.263ns (93.254%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.401ns = ( 8.433 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.668ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.675     4.668    pipeline_SADA_inst/Reg_tree_ruleMatch_inst/clk
+    SLICE_X54Y137        FDCE                                         r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y137        FDCE (Prop_fdce_C_Q)         0.236     4.904 r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/Q
+                         net (fo=114, routed)         3.263     8.166    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/addrb[4]
+    RAMB36_X6Y17         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.652     8.433    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/clka
+    RAMB36_X6Y17         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism              0.260     8.693    
+                         clock uncertainty           -0.035     8.658    
+    RAMB36_X6Y17         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                     -0.496     8.162    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                          8.162    
+                         arrival time                          -8.166    
+  -------------------------------------------------------------------
+                         slack                                 -0.004    
+
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.032ns  (clk rise@4.032ns - clk rise@0.000ns)
+  Data Path Delay:        3.499ns  (logic 0.236ns (6.746%)  route 3.263ns (93.254%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.002ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.405ns = ( 8.437 - 4.032 ) 
+    Source Clock Delay      (SCD):    4.668ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.675     4.668    pipeline_SADA_inst/Reg_tree_ruleMatch_inst/clk
+    SLICE_X54Y137        FDCE                                         r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y137        FDCE (Prop_fdce_C_Q)         0.236     4.904 r  pipeline_SADA_inst/Reg_tree_ruleMatch_inst/node_out2_reg[16]/Q
+                         net (fo=114, routed)         3.263     8.166    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/addrb[4]
+    RAMB36_X6Y19         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.032     4.032 r  
+    AU28                                              0.000     4.032 r  clk (IN)
+                         net (fo=0)                   0.000     4.032    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     4.553 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.145     6.698    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     6.781 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       1.656     8.437    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/clka
+    RAMB36_X6Y19         RAMB36E1                                     r  pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism              0.260     8.697    
+                         clock uncertainty           -0.035     8.662    
+    RAMB36_X6Y19         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                     -0.496     8.166    pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                          8.166    
+                         arrival time                          -8.166    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.020ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/level2_inst/packet_out2_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.107ns (43.976%)  route 0.136ns (56.024%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.219ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.368ns
+    Source Clock Delay      (SCD):    1.906ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.679     1.906    pipeline_DA_inst/level2_inst/clk
+    SLICE_X12Y250        FDCE                                         r  pipeline_DA_inst/level2_inst/packet_out2_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X12Y250        FDCE (Prop_fdce_C_Q)         0.107     2.013 r  pipeline_DA_inst/level2_inst/packet_out2_reg[5]/Q
+                         net (fo=1, routed)           0.136     2.150    pipeline_DA_inst/Reg_level2_level3_inst/packet_out2[5]
+    SLICE_X12Y249        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.898     2.368    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X12Y249        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[5]/C
+                         clock pessimism             -0.242     2.125    
+    SLICE_X12Y249        FDCE (Hold_fdce_C_D)         0.004     2.129    pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -2.129    
+                         arrival time                           2.150    
+  -------------------------------------------------------------------
+                         slack                                  0.020    
+
+Slack (MET) :             0.028ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/level3_inst/temp_packet1_reg[83]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[83]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.091ns (37.710%)  route 0.150ns (62.290%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.325ns
+    Source Clock Delay      (SCD):    1.864ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.637     1.864    pipeline_DA_inst/level3_inst/clk
+    SLICE_X45Y250        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet1_reg[83]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y250        FDRE (Prop_fdre_C_Q)         0.091     1.955 r  pipeline_DA_inst/level3_inst/temp_packet1_reg[83]/Q
+                         net (fo=1, routed)           0.150     2.106    pipeline_DA_inst/level3_inst/temp_packet1[83]
+    SLICE_X45Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[83]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.855     2.325    pipeline_DA_inst/level3_inst/clk
+    SLICE_X45Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[83]/C
+                         clock pessimism             -0.242     2.082    
+    SLICE_X45Y249        FDRE (Hold_fdre_C_D)        -0.005     2.077    pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[83]
+  -------------------------------------------------------------------
+                         required time                         -2.077    
+                         arrival time                           2.106    
+  -------------------------------------------------------------------
+                         slack                                  0.028    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/packet_out1_reg[64]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_packet1_reg[64]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.326ns  (logic 0.100ns (30.637%)  route 0.226ns (69.363%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.217ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.326ns
+    Source Clock Delay      (SCD):    1.866ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.639     1.866    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X39Y252        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out1_reg[64]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y252        FDCE (Prop_fdce_C_Q)         0.100     1.966 r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out1_reg[64]/Q
+                         net (fo=4, routed)           0.226     2.193    pipeline_DA_inst/level3_inst/D[64]
+    SLICE_X39Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet1_reg[64]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.856     2.326    pipeline_DA_inst/level3_inst/clk
+    SLICE_X39Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet1_reg[64]/C
+                         clock pessimism             -0.242     2.083    
+    SLICE_X39Y249        FDRE (Hold_fdre_C_D)         0.047     2.130    pipeline_DA_inst/level3_inst/temp_packet1_reg[64]
+  -------------------------------------------------------------------
+                         required time                         -2.130    
+                         arrival time                           2.193    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[44]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_packet2_reg[44]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.331ns  (logic 0.118ns (35.684%)  route 0.213ns (64.316%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.363ns
+    Source Clock Delay      (SCD):    1.902ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.675     1.902    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X18Y250        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[44]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y250        FDCE (Prop_fdce_C_Q)         0.118     2.020 r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[44]/Q
+                         net (fo=4, routed)           0.213     2.233    pipeline_DA_inst/level3_inst/temp_packet2_reg[103]_0[44]
+    SLICE_X17Y248        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[44]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.893     2.363    pipeline_DA_inst/level3_inst/clk
+    SLICE_X17Y248        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[44]/C
+                         clock pessimism             -0.242     2.120    
+    SLICE_X17Y248        FDRE (Hold_fdre_C_D)         0.047     2.167    pipeline_DA_inst/level3_inst/temp_packet2_reg[44]
+  -------------------------------------------------------------------
+                         required time                         -2.167    
+                         arrival time                           2.233    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/level3_inst/temp_packet1_reg[54]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[54]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.283ns  (logic 0.091ns (32.106%)  route 0.192ns (67.894%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.216ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.325ns
+    Source Clock Delay      (SCD):    1.866ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.639     1.866    pipeline_DA_inst/level3_inst/clk
+    SLICE_X43Y250        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet1_reg[54]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y250        FDRE (Prop_fdre_C_Q)         0.091     1.957 r  pipeline_DA_inst/level3_inst/temp_packet1_reg[54]/Q
+                         net (fo=1, routed)           0.192     2.150    pipeline_DA_inst/level3_inst/temp_packet1[54]
+    SLICE_X43Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.855     2.325    pipeline_DA_inst/level3_inst/clk
+    SLICE_X43Y249        FDRE                                         r  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[54]/C
+                         clock pessimism             -0.242     2.082    
+    SLICE_X43Y249        FDRE (Hold_fdre_C_D)        -0.003     2.079    pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[54]
+  -------------------------------------------------------------------
+                         required time                         -2.079    
+                         arrival time                           2.150    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/matched_out2_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_matched2_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.118ns (32.700%)  route 0.243ns (67.300%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.327ns
+    Source Clock Delay      (SCD):    1.866ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.639     1.866    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X30Y250        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/matched_out2_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y250        FDCE (Prop_fdce_C_Q)         0.118     1.984 r  pipeline_DA_inst/Reg_level2_level3_inst/matched_out2_reg/Q
+                         net (fo=1, routed)           0.243     2.227    pipeline_DA_inst/level3_inst/matched_out2
+    SLICE_X30Y248        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_matched2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.857     2.327    pipeline_DA_inst/level3_inst/clk
+    SLICE_X30Y248        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_matched2_reg/C
+                         clock pessimism             -0.242     2.084    
+    SLICE_X30Y248        FDRE (Hold_fdre_C_D)         0.066     2.150    pipeline_DA_inst/level3_inst/temp_matched2_reg
+  -------------------------------------------------------------------
+                         required time                         -2.150    
+                         arrival time                           2.227    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.079ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[72]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_packet2_reg[72]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.339ns  (logic 0.118ns (34.767%)  route 0.221ns (65.233%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.360ns
+    Source Clock Delay      (SCD):    1.899ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.672     1.899    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X26Y251        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[72]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X26Y251        FDCE (Prop_fdce_C_Q)         0.118     2.017 r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[72]/Q
+                         net (fo=4, routed)           0.221     2.239    pipeline_DA_inst/level3_inst/temp_packet2_reg[103]_0[72]
+    SLICE_X26Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[72]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.890     2.360    pipeline_DA_inst/level3_inst/clk
+    SLICE_X26Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[72]/C
+                         clock pessimism             -0.242     2.117    
+    SLICE_X26Y247        FDRE (Hold_fdre_C_D)         0.042     2.159    pipeline_DA_inst/level3_inst/temp_packet2_reg[72]
+  -------------------------------------------------------------------
+                         required time                         -2.159    
+                         arrival time                           2.239    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.082ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/node_out1_reg[33]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_node1_reg[33]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.307ns  (logic 0.107ns (34.830%)  route 0.200ns (65.170%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.327ns
+    Source Clock Delay      (SCD):    1.866ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.639     1.866    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X32Y252        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/node_out1_reg[33]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y252        FDCE (Prop_fdce_C_Q)         0.107     1.973 r  pipeline_DA_inst/Reg_level2_level3_inst/node_out1_reg[33]/Q
+                         net (fo=3, routed)           0.200     2.173    pipeline_DA_inst/level3_inst/temp_node1_reg[36]_0[27]
+    SLICE_X33Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_node1_reg[33]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.857     2.327    pipeline_DA_inst/level3_inst/clk
+    SLICE_X33Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_node1_reg[33]/C
+                         clock pessimism             -0.242     2.084    
+    SLICE_X33Y247        FDRE (Hold_fdre_C_D)         0.007     2.091    pipeline_DA_inst/level3_inst/temp_node1_reg[33]
+  -------------------------------------------------------------------
+                         required time                         -2.091    
+                         arrival time                           2.173    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+Slack (MET) :             0.083ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[45]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/temp_packet2_reg[45]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.348ns  (logic 0.118ns (33.870%)  route 0.230ns (66.130%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.218ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.363ns
+    Source Clock Delay      (SCD):    1.902ns
+    Clock Pessimism Removal (CPR):    0.242ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.675     1.902    pipeline_DA_inst/Reg_level2_level3_inst/clk
+    SLICE_X18Y250        FDCE                                         r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[45]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y250        FDCE (Prop_fdce_C_Q)         0.118     2.020 r  pipeline_DA_inst/Reg_level2_level3_inst/packet_out2_reg[45]/Q
+                         net (fo=4, routed)           0.230     2.251    pipeline_DA_inst/level3_inst/temp_packet2_reg[103]_0[45]
+    SLICE_X19Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[45]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.893     2.363    pipeline_DA_inst/level3_inst/clk
+    SLICE_X19Y247        FDRE                                         r  pipeline_DA_inst/level3_inst/temp_packet2_reg[45]/C
+                         clock pessimism             -0.242     2.120    
+    SLICE_X19Y247        FDRE (Hold_fdre_C_D)         0.047     2.167    pipeline_DA_inst/level3_inst/temp_packet2_reg[45]
+  -------------------------------------------------------------------
+                         required time                         -2.167    
+                         arrival time                           2.251    
+  -------------------------------------------------------------------
+                         slack                                  0.083    
+
+Slack (MET) :             0.084ns  (arrival time - required time)
+  Source:                 pipeline_DA_inst/level3_inst/sec_temp_node1_reg[35]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Destination:            pipeline_DA_inst/level3_inst/node_out1_reg[35]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.016ns period=4.032ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.182ns  (logic 0.128ns (70.512%)  route 0.054ns (29.488%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.326ns
+    Source Clock Delay      (SCD):    1.879ns
+    Clock Pessimism Removal (CPR):    0.435ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.652     1.879    pipeline_DA_inst/level3_inst/clk
+    SLICE_X33Y246        FDRE                                         r  pipeline_DA_inst/level3_inst/sec_temp_node1_reg[35]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y246        FDRE (Prop_fdre_C_Q)         0.100     1.979 r  pipeline_DA_inst/level3_inst/sec_temp_node1_reg[35]/Q
+                         net (fo=1, routed)           0.054     2.033    pipeline_DA_inst/level3_inst/sec_temp_node1[35]
+    SLICE_X32Y246        LUT3 (Prop_lut3_I0_O)        0.028     2.061 r  pipeline_DA_inst/level3_inst/node_out1[35]_i_1/O
+                         net (fo=1, routed)           0.000     2.061    pipeline_DA_inst/level3_inst/p_0_in[35]
+    SLICE_X32Y246        FDCE                                         r  pipeline_DA_inst/level3_inst/node_out1_reg[35]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    AU28                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  clk_IBUF_BUFG_inst/O
+                         net (fo=18632, routed)       0.856     2.326    pipeline_DA_inst/level3_inst/clk
+    SLICE_X32Y246        FDCE                                         r  pipeline_DA_inst/level3_inst/node_out1_reg[35]/C
+                         clock pessimism             -0.435     1.890    
+    SLICE_X32Y246        FDCE (Hold_fdce_C_D)         0.087     1.977    pipeline_DA_inst/level3_inst/node_out1_reg[35]
+  -------------------------------------------------------------------
+                         required time                         -1.977    
+                         arrival time                           2.061    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 2.016 }
+Period(ns):         4.032
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         4.032       2.193      RAMB36_X1Y38   pipeline_DA_inst/ruleMatch_DA_inst/rule_da/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            1.839         4.032       2.193      RAMB36_X1Y38   pipeline_DA_inst/ruleMatch_DA_inst/rule_da/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         4.032       2.193      RAMB36_X0Y36   pipeline_DA_inst/ruleMatch_DA_inst/rule_da/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            1.839         4.032       2.193      RAMB36_X0Y36   pipeline_DA_inst/ruleMatch_DA_inst/rule_da/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         4.032       2.193      RAMB36_X1Y20   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            1.839         4.032       2.193      RAMB36_X1Y20   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         4.032       2.193      RAMB36_X7Y21   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            1.839         4.032       2.193      RAMB36_X7Y21   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            1.839         4.032       2.193      RAMB36_X6Y16   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            1.839         4.032       2.193      RAMB36_X6Y16   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X58Y196  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri1_reg[38]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X58Y196  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri2_reg[102]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X48Y213  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri2_reg[61]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X48Y213  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri2_reg[63]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X48Y213  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri2_reg[65]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X48Y213  pipeline_DA_inst/ruleMatch_DA_inst/rule_pri2_reg[67]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         2.016       1.616      SLICE_X59Y154  pipeline_SADA_inst/level3_inst/packet_out2_reg[9]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.400         2.016       1.616      SLICE_X77Y157  pipeline_SADA_inst/level3_inst/sec_temp_packet1_reg[101]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.400         2.016       1.616      SLICE_X56Y204  pipeline_DA_inst/ruleMatch_DA_inst/sec_temp_packet2_reg[97]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.400         2.016       1.616      SLICE_X50Y91   pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[1]_INST_0_psbram/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         2.016       1.666      SLICE_X52Y169  inst_final_prio/action_valid_out1_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         2.016       1.666      SLICE_X52Y169  inst_final_prio/action_valid_out2_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X45Y249  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[92]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X43Y249  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[93]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X47Y250  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[94]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X47Y250  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[94]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X49Y249  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[95]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X35Y249  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[96]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X35Y249  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[96]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.350         2.016       1.666      SLICE_X35Y250  pipeline_DA_inst/level3_inst/sec_temp_packet1_reg[97]/C
+
+
+

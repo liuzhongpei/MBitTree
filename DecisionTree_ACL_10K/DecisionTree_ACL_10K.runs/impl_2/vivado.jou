@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jul  2 23:44:15 2022
+# Process ID: 4740
+# Current directory: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/impl_2
+# Command line: vivado.exe -log MBitTree.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MBitTree.tcl -notrace
+# Log file: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/impl_2/MBitTree.vdi
+# Journal file: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
+source MBitTree.tcl -notrace

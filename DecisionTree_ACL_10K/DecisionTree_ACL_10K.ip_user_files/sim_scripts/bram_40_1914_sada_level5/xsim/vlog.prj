@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../ip/bram_40_1914_sada_level5/sim/bram_40_1914_sada_level5.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

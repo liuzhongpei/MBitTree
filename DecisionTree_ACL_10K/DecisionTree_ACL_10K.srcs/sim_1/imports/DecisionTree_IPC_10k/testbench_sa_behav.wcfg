@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_sa_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench_sa" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="18484fs"></ZoomStartTime>
+      <ZoomEndTime time="77985fs"></ZoomEndTime>
+      <Cursor1Time time="120000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="176"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/testbench_sa/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/RSTn" type="logic">
+      <obj_property name="ElementShortName">RSTn</obj_property>
+      <obj_property name="ObjectShortName">RSTn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/packet_in1" type="array">
+      <obj_property name="ElementShortName">packet_in1[103:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_in1[103:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/packet_in2" type="array">
+      <obj_property name="ElementShortName">packet_in2[103:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_in2[103:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/rule_id1" type="array">
+      <obj_property name="ElementShortName">rule_id1[13:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_id1[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/rule_id2" type="array">
+      <obj_property name="ElementShortName">rule_id2[13:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_id2[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/RSTn" type="logic">
+      <obj_property name="ElementShortName">RSTn</obj_property>
+      <obj_property name="ObjectShortName">RSTn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/node_in1" type="array">
+      <obj_property name="ElementShortName">node_in1[39:0]</obj_property>
+      <obj_property name="ObjectShortName">node_in1[39:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/packet_in1" type="array">
+      <obj_property name="ElementShortName">packet_in1[103:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_in1[103:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/temp_packet1" type="array">
+      <obj_property name="ElementShortName">temp_packet1[103:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_packet1[103:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/rule_node1" type="array">
+      <obj_property name="ElementShortName">rule_node1[7:0][170:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_node1[7:0][170:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/addr1" type="array">
+      <obj_property name="ElementShortName">addr1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/dout1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">dout1[1367:0]</obj_property>
+      <obj_property name="ObjectShortName">dout1[1367:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">dout1[136/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/dout17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/rule_pri1" type="array">
+      <obj_property name="ElementShortName">rule_pri1[111:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_pri1[111:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/temp_flag1" type="array">
+      <obj_property name="ElementShortName">temp_flag1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_flag1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/match_flag1" type="array">
+      <obj_property name="ElementShortName">match_flag1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">match_flag1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/addr2" type="array">
+      <obj_property name="ElementShortName">addr2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/match_flag2" type="array">
+      <obj_property name="ElementShortName">match_flag2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">match_flag2[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/ruleMatch_SA_inst/temp_flag2" type="array">
+      <obj_property name="ElementShortName">temp_flag2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_flag2[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/Reg_match_priority_inst/RSTn" type="logic">
+      <obj_property name="ElementShortName">RSTn</obj_property>
+      <obj_property name="ObjectShortName">RSTn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/Reg_match_priority_inst/rule_pri_in1" type="array">
+      <obj_property name="ElementShortName">rule_pri_in1[111:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_pri_in1[111:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/Reg_match_priority_inst/match_flag_in1" type="array">
+      <obj_property name="ElementShortName">match_flag_in1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">match_flag_in1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/Reg_match_priority_inst/rule_pri_out1" type="array">
+      <obj_property name="ElementShortName">rule_pri_out1[111:0]</obj_property>
+      <obj_property name="ObjectShortName">rule_pri_out1[111:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_sa/pipeline_SA_inst/Reg_match_priority_inst/match_flag_out1" type="array">
+      <obj_property name="ElementShortName">match_flag_out1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">match_flag_out1[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

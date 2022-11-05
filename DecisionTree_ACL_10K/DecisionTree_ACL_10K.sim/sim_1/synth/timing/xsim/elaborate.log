@@ -1,0 +1,13 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b5e7126ab415496cb7132b82bf0b6852 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot testbench_sa_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.testbench_sa xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'rule_id2' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:105]
+ERROR: [VRFC 10-3180] cannot find port 'rule_id1' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:104]
+ERROR: [VRFC 10-3180] cannot find port 'packet_in2' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:102]
+ERROR: [VRFC 10-3180] cannot find port 'packet_in1' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:101]
+ERROR: [VRFC 10-3180] cannot find port 'RSTn' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:98]
+ERROR: [VRFC 10-3180] cannot find port 'clk' on this module [E:/Xilinx/project/DecisionTree_IPC_10k/DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v:97]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

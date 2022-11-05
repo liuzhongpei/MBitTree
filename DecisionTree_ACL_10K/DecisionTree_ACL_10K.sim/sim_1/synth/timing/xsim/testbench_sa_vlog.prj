@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"testbench_sa_time_synth.v" \
+"../../../../../DecisionTree_IPC_10k.srcs/sim_1/new/testbench_sa.v" \
+
+# Do not sort compile order
+nosort

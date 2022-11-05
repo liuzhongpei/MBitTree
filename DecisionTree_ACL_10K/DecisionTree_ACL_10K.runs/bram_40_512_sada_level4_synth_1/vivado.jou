@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Sep 23 22:08:44 2021
+# Process ID: 19480
+# Current directory: E:/Xilinx/project/IPC_10k_test/IPC_10k_test.runs/bram_40_512_sada_level4_synth_1
+# Command line: vivado.exe -log bram_40_512_sada_level4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_40_512_sada_level4.tcl
+# Log file: E:/Xilinx/project/IPC_10k_test/IPC_10k_test.runs/bram_40_512_sada_level4_synth_1/bram_40_512_sada_level4.vds
+# Journal file: E:/Xilinx/project/IPC_10k_test/IPC_10k_test.runs/bram_40_512_sada_level4_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bram_40_512_sada_level4.tcl -notrace

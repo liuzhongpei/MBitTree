@@ -1,0 +1,2 @@
+bram_40_64_da_level5.v,verilog,xil_defaultlib,../../../ip/bram_40_64_da_level5/sim/bram_40_64_da_level5.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

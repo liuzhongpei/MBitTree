@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Oct 17 16:25:14 2021
+# Process ID: 1564
+# Current directory: E:/Xilinx/project/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/bram_40_1914_sada_level5_synth_1
+# Command line: vivado.exe -log bram_40_1914_sada_level5.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_40_1914_sada_level5.tcl
+# Log file: E:/Xilinx/project/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/bram_40_1914_sada_level5_synth_1/bram_40_1914_sada_level5.vds
+# Journal file: E:/Xilinx/project/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/bram_40_1914_sada_level5_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bram_40_1914_sada_level5.tcl -notrace

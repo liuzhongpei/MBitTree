@@ -1,0 +1,676 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jul  2 23:42:20 2022
+# Process ID: 7240
+# Current directory: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2
+# Command line: vivado.exe -log MBitTree.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MBitTree.tcl
+# Log file: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/MBitTree.vds
+# Journal file: G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source MBitTree.tcl -notrace
+Command: synth_design -top MBitTree -part xc7vx690tffg1761-2 -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 680
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1215.438 ; gain = 178.297
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MBitTree' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pipeline_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/pipeline_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'root_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_8_da_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_8_da_level2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_8_da_level2' (1#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_8_da_level2_stub.v:6]
+WARNING: [Synth 8-689] width (4) of port connection 'addra' does not match port width (3) of module 'bram_40_8_da_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_DA.v:110]
+WARNING: [Synth 8-689] width (4) of port connection 'addrb' does not match port width (3) of module 'bram_40_8_da_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_DA.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'root_DA' (2#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Register_root_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_root_level2.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Register_root_level2' (3#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_root_level2.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel2_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel2_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_64_da_level3' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_da_level3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_64_da_level3' (4#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_da_level3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel2_DA' (5#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel2_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_level2_level3' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level2_lelvel3.v:22]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_level2_level3' (6#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level2_lelvel3.v:22]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel3_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel3_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_512_da_level4' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_512_da_level4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_512_da_level4' (7#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_512_da_level4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel3_DA' (8#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel3_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_level3_level4' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level3_level4.v:22]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_level3_level4' (9#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level3_level4.v:22]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel4_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_64_da_level5' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_da_level5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_64_da_level5' (10#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_da_level5_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (6) of module 'bram_40_64_da_level5' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_DA.v:90]
+WARNING: [Synth 8-689] width (9) of port connection 'addrb' does not match port width (6) of module 'bram_40_64_da_level5' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_DA.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel4_DA' (11#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_level4_level5' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level4_level5.v:22]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_level4_level5' (12#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level4_level5.v:22]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel5_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel5_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel5_DA' (13#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel5_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_level5_level6' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level5_level6.v:22]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_level5_level6' (14#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_level5_level6.v:22]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel6_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel6_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel6_DA' (15#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel6_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_tree_rulematch' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_tree_rulematch.v:22]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_tree_rulematch' (16#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_tree_rulematch.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ruleMatch_DA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/ruleMatch_DA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+	Parameter RULE_WIDTH bound to: 171 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_171_da' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_171_da_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_171_da' (17#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_171_da_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ruleMatch_DA' (18#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/ruleMatch_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_match_priority' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_match_priority.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+	Parameter RULE_WIDTH bound to: 171 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reg_match_priority' (19#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/Reg_match_priority.v:23]
+INFO: [Synth 8-6157] synthesizing module 'prioritySolver' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/prioritySolver.v:23]
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'prioritySolver' (20#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/prioritySolver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_DA' (21#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/pipeline_DA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/pipeline_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'root_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_8_sada_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_8_sada_level2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_8_sada_level2' (22#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_8_sada_level2_stub.v:6]
+WARNING: [Synth 8-689] width (4) of port connection 'addra' does not match port width (3) of module 'bram_40_8_sada_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_SADA.v:110]
+WARNING: [Synth 8-689] width (4) of port connection 'addrb' does not match port width (3) of module 'bram_40_8_sada_level2' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_SADA.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'root_SADA' (23#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/root_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel2_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel2_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_64_sada_level3' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_sada_level3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_64_sada_level3' (24#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_64_sada_level3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel2_SADA' (25#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel2_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel3_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel3_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_512_sada_level4' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_512_sada_level4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_512_sada_level4' (26#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_512_sada_level4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel3_SADA' (27#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel3_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel4_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_1914_sada_level5' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_1914_sada_level5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_1914_sada_level5' (28#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_1914_sada_level5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel4_SADA' (29#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel4_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel5_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel5_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_998_sada_level6' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_998_sada_level6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_998_sada_level6' (30#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_998_sada_level6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel5_SADA' (31#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel5_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TreeLevel6_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel6_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter FIRST_BIT bound to: 14 - type: integer 
+	Parameter SECOND_BIT bound to: 22 - type: integer 
+	Parameter THIRD_BIT bound to: 30 - type: integer 
+	Parameter BIT_WIDTH bound to: 8 - type: integer 
+	Parameter NODE_ADDR bound to: 9 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_40_158_sada_level7' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_158_sada_level7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_40_158_sada_level7' (32#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_40_158_sada_level7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TreeLevel6_SADA' (33#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/TreeLevel6_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ruleMatch_SADA' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/ruleMatch_SADA.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter LEAF_ADDR bound to: 12 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+	Parameter RULE_WIDTH bound to: 171 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_171_sada' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_171_sada_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_171_sada' (34#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/realtime/bram_171_sada_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ruleMatch_SADA' (35#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/ruleMatch_SADA.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_SADA' (36#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/pipeline_SADA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'reg_multi_pipeline' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/reg_multi_pipeline.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_multi_pipeline' (37#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/reg_multi_pipeline.v:23]
+WARNING: [Synth 8-7071] port 'rule_pipe2_in1' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'rule_pipe2_in2' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_in1' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_in2' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'rule_pipe2_out1' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'rule_pipe2_out2' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_out1' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_out2' of module 'reg_multi_pipeline' is unconnected for instance 'instance_reg_pipe' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+WARNING: [Synth 8-7023] instance 'instance_reg_pipe' of module 'reg_multi_pipeline' has 30 connections declared, but only 22 given [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:108]
+INFO: [Synth 8-6157] synthesizing module 'final_prio_solver' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/final_prio_solver.v:23]
+	Parameter PACKET_WIDTH bound to: 104 - type: integer 
+	Parameter NODE_WIDTH bound to: 40 - type: integer 
+	Parameter RULE_ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'final_prio_solver' (38#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/final_prio_solver.v:23]
+WARNING: [Synth 8-7071] port 'rule_pipe2_in1' of module 'final_prio_solver' is unconnected for instance 'inst_final_prio' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:147]
+WARNING: [Synth 8-7071] port 'rule_pipe2_in2' of module 'final_prio_solver' is unconnected for instance 'inst_final_prio' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:147]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_in1' of module 'final_prio_solver' is unconnected for instance 'inst_final_prio' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:147]
+WARNING: [Synth 8-7071] port 'act_valid_pipe2_in2' of module 'final_prio_solver' is unconnected for instance 'inst_final_prio' [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:147]
+WARNING: [Synth 8-7023] instance 'inst_final_prio' of module 'final_prio_solver' has 22 connections declared, but only 18 given [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'MBitTree' (39#1) [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/new/MBitTree.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1304.035 ; gain = 266.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1304.035 ; gain = 266.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1304.035 ; gain = 266.895
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.319 . Memory (MB): peak = 1304.035 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_sada_level3/bram_40_64_sada_level3/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_SADA_inst/level2_inst/bram_level3_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_sada_level3/bram_40_64_sada_level3/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_SADA_inst/level2_inst/bram_level3_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_da_level5/bram_40_64_da_level5/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_DA_inst/level4_inst/bram_level5_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_da_level5/bram_40_64_da_level5/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_DA_inst/level4_inst/bram_level5_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_sada_level2/bram_40_8_sada_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_SADA_inst/root_inst/bram_level2_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_sada_level2/bram_40_8_sada_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_SADA_inst/root_inst/bram_level2_sada'
+Parsing XDC File [g:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/ip/bram_171_da/bram_171_da/bram_171_da_in_context.xdc] for cell 'pipeline_DA_inst/ruleMatch_DA_inst/rule_da'
+Finished Parsing XDC File [g:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/ip/bram_171_da/bram_171_da/bram_171_da_in_context.xdc] for cell 'pipeline_DA_inst/ruleMatch_DA_inst/rule_da'
+Parsing XDC File [g:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/ip/bram_171_sada/bram_171_sada/bram_171_sada_in_context.xdc] for cell 'pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada'
+Finished Parsing XDC File [g:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/sources_1/ip/bram_171_sada/bram_171_sada/bram_171_sada_in_context.xdc] for cell 'pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_512_da_level4/bram_40_512_da_level4/bram_40_512_da_level4_in_context.xdc] for cell 'pipeline_DA_inst/level3_inst/bram_level4_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_512_da_level4/bram_40_512_da_level4/bram_40_512_da_level4_in_context.xdc] for cell 'pipeline_DA_inst/level3_inst/bram_level4_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_da_level3/bram_40_64_da_level3/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_DA_inst/level2_inst/bram_level3_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_64_da_level3/bram_40_64_da_level3/bram_40_64_da_level3_in_context.xdc] for cell 'pipeline_DA_inst/level2_inst/bram_level3_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_512_sada_level4/bram_40_512_sada_level4/bram_40_512_sada_level4_in_context.xdc] for cell 'pipeline_SADA_inst/level3_inst/bram_level4_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_512_sada_level4/bram_40_512_sada_level4/bram_40_512_sada_level4_in_context.xdc] for cell 'pipeline_SADA_inst/level3_inst/bram_level4_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/root_inst/bram_level2_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/root_inst/bram_level2_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/level5_inst/bram_level6_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/level5_inst/bram_level6_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/level6_DA_inst/bram_level7_da'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_8_da_level2/bram_40_8_da_level2/bram_40_8_da_level2_in_context.xdc] for cell 'pipeline_DA_inst/level6_DA_inst/bram_level7_da'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_1914_sada_level5/bram_40_1914_sada_level5/bram_40_1914_sada_level5_in_context.xdc] for cell 'pipeline_SADA_inst/level4_inst/bram_level5_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_1914_sada_level5/bram_40_1914_sada_level5/bram_40_1914_sada_level5_in_context.xdc] for cell 'pipeline_SADA_inst/level4_inst/bram_level5_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_998_sada_level6/bram_40_998_sada_level6/bram_40_998_sada_level6_in_context.xdc] for cell 'pipeline_SADA_inst/level5_inst/bram_level6_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_998_sada_level6/bram_40_998_sada_level6/bram_40_998_sada_level6_in_context.xdc] for cell 'pipeline_SADA_inst/level5_inst/bram_level6_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_158_sada_level7/bram_40_158_sada_level7/bram_40_158_sada_level7_in_context.xdc] for cell 'pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada'
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/.Xil/Vivado-7240-User-2020JGCOAY/bram_40_158_sada_level7/bram_40_158_sada_level7/bram_40_158_sada_level7_in_context.xdc] for cell 'pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada'
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/constrs_1/new/MBitTree.xdc]
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.srcs/constrs_1/new/MBitTree.xdc]
+Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/dont_touch.xdc]
+Finished Parsing XDC File [G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1480.496 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.388 . Memory (MB): peak = 1480.496 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/level2_inst/bram_level3_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/level3_inst/bram_level4_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/level4_inst/bram_level5_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/level5_inst/bram_level6_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/level6_DA_inst/bram_level7_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/root_inst/bram_level2_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_DA_inst/ruleMatch_DA_inst/rule_da' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/level2_inst/bram_level3_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/level3_inst/bram_level4_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/level4_inst/bram_level5_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/level5_inst/bram_level6_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/root_inst/bram_level2_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada' at clock pin 'clka' is different from the actual clock period '4.032', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/level2_inst/bram_level3_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/level4_inst/bram_level5_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/root_inst/bram_level2_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/ruleMatch_DA_inst/rule_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/ruleMatch_SADA_inst/rule_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/level3_inst/bram_level4_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/level2_inst/bram_level3_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/level3_inst/bram_level4_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/root_inst/bram_level2_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/level5_inst/bram_level6_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_DA_inst/level6_DA_inst/bram_level7_da. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/level4_inst/bram_level5_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/level5_inst/bram_level6_sada. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pipeline_SADA_inst/level6_SADA_inst/bram_level7_sada. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	              112 Bit    Registers := 8     
+	              104 Bit    Registers := 108   
+	               40 Bit    Registers := 96    
+	               14 Bit    Registers := 12    
+	                8 Bit    Registers := 8     
+	                1 Bit    Registers := 216   
++---Muxes : 
+	   2 Input   40 Bit        Muxes := 20    
+	   4 Input   14 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1494.715 ; gain = 457.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1559.070 ; gain = 521.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:11 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1367]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1366]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1365]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1364]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1363]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1362]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1361]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1360]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1359]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1358]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1357]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1356]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1355]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1354]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1353]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1352]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1351]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1350]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1349]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1348]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1347]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1346]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1345]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1344]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1343]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1342]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1341]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1340]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1339]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1338]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1337]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1336]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1335]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1334]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1333]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1332]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1331]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1330]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1329]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1328]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1327]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1326]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1325]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1324]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1323]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1322]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1321]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1320]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1319]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1318]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1317]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1316]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1315]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1314]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1313]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1312]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1311]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1310]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1309]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1308]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1307]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1306]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1305]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1304]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1303]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1302]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1301]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1300]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1299]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1298]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1297]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1296]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1295]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1294]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1293]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1292]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1291]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1290]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1289]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1288]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1287]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1286]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1285]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1284]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1283]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1282]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1281]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1280]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1279]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1278]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1277]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1276]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1275]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1274]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1273]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1272]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1271]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1270]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1269]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \pipeline_DA_inst/ruleMatch_DA_inst/rule_da  has unconnected pin dina[1268]
+INFO: [Common 17-14] Message 'Synth 8-4442' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:15 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:17 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:17 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |bram_40_64_da_level3     |         1|
+|2     |bram_40_512_da_level4    |         1|
+|3     |bram_40_64_da_level5     |         1|
+|4     |bram_40_8_da_level2      |         3|
+|5     |bram_171_da              |         1|
+|6     |bram_40_64_sada_level3   |         1|
+|7     |bram_40_512_sada_level4  |         1|
+|8     |bram_40_1914_sada_level5 |         1|
+|9     |bram_40_998_sada_level6  |         1|
+|10    |bram_40_158_sada_level7  |         1|
+|11    |bram_40_8_sada_level2    |         1|
+|12    |bram_171_sada            |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------+------+
+|      |Cell                     |Count |
++------+-------------------------+------+
+|1     |bram_171_da              |     1|
+|2     |bram_171_sada            |     1|
+|3     |bram_40_158_sada_level7  |     1|
+|4     |bram_40_1914_sada_level5 |     1|
+|5     |bram_40_512_da_level4    |     1|
+|6     |bram_40_512_sada_level4  |     1|
+|7     |bram_40_64_da_level3     |     1|
+|8     |bram_40_64_da_level5     |     1|
+|9     |bram_40_64_sada_level3   |     1|
+|10    |bram_40_8_da_level2      |     1|
+|11    |bram_40_8_da_level2_     |     2|
+|13    |bram_40_8_sada_level2    |     1|
+|14    |bram_40_998_sada_level6  |     1|
+|15    |BUFG                     |     1|
+|16    |CARRY4                   |   488|
+|17    |LUT1                     |     1|
+|18    |LUT2                     |   216|
+|19    |LUT3                     |   866|
+|20    |LUT4                     |  2504|
+|21    |LUT5                     |   342|
+|22    |LUT6                     |  3910|
+|23    |MUXF7                    |   792|
+|24    |MUXF8                    |   324|
+|25    |FDCE                     |  7664|
+|26    |FDRE                     |  7588|
+|27    |IBUF                     |   212|
+|28    |OBUF                     |    32|
++------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:17 . Memory (MB): peak = 1560.301 ; gain = 523.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 5632 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 1560.301 ; gain = 332.480
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:17 . Memory (MB): peak = 1560.301 ; gain = 523.160
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.399 . Memory (MB): peak = 1569.246 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1604 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1575.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 34 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:37 . Memory (MB): peak = 1575.137 ; gain = 537.996
+INFO: [Common 17-1381] The checkpoint 'G:/code/DecisionTree_ACL_10K/DecisionTree_ACL_10K.runs/synth_2/MBitTree.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MBitTree_utilization_synth.rpt -pb MBitTree_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  2 23:44:08 2022...
